@@ -2,14 +2,27 @@
 import { Redis } from '@upstash/redis';
 import { NextResponse } from 'next/server';
 
-// 1. Initialize the correct, serverless-friendly client
-// It automatically reads your Vercel Environment Variables
-const redis = Redis.fromEnv();
-
-// 2. This is the export that fixes your 405 error
 export async function POST(req: Request) {
   try {
-    // 3. Get the event name from the frontend
+    // 1. Explicitly check for the variables (supports both naming conventions)
+    const redisUrl = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
+    const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+
+    // 2. specific error check for missing keys
+    if (!redisUrl || !redisToken) {
+      console.error("Missing Redis Env Variables");
+      return NextResponse.json(
+        { message: 'Database configuration missing' },
+        { status: 500 }
+      );
+    }
+
+    // 3. Initialize Redis with the found keys
+    const redis = new Redis({
+      url: redisUrl,
+      token: redisToken,
+    });
+
     const { eventName } = await req.json();
 
     if (!eventName) {
@@ -24,14 +37,12 @@ export async function POST(req: Request) {
       timestamp: new Date().toISOString(),
     };
 
-    // 4. Save it to the database
-    // We must stringify the JSON object to save it in Redis
     await redis.lpush('gf_events', JSON.stringify(logEntry));
 
     return NextResponse.json({ success: true, logged: logEntry });
 
   } catch (error) {
-    console.error(error);
+    console.error("Tracking Error:", error);
     return NextResponse.json(
       { message: 'Internal server error' },
       { status: 500 }
