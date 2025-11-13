@@ -10,7 +10,7 @@ export default function WrongAnswerModal({ onTryAgain }: WrongAnswerModalProps) 
       <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 animate-in bounce-in text-center">
         <div className="text-6xl mb-4">😤</div>
         <h2 className="text-2xl font-bold text-red-600 mb-2">WRONG ANSWER!</h2>
-        <p className="text-gray-600 mb-6">You need to miss me 100%! Try again 😠</p>
+        <p className="text-gray-600 mb-6">You need to miss me 100%! Try again pwease</p>
 
         <button
           onClick={onTryAgain}
