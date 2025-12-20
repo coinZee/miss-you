@@ -8,8 +8,8 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Do you miss me?",
-  description: "A cute and romantic interactive page",
+  title: "PWEASE FORGIVE ME",
+  description: "PWEASE FORGIVE ME",
   generator: "v0.app",
   icons: {
     icon: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon.svg",
+        url: "/icon.jpg",
         type: "image/svg+xml",
       },
     ],
