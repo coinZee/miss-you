@@ -14,12 +14,12 @@ export default function MissYouModal({ sliderValue, onSliderChange, onOk, onClos
         className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 animate-in zoom-in"
         onClick={(e) => e.stopPropagation()}
       >
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">I miss you too! 💕</h2>
-        <p className="text-center text-gray-600 mb-6">But how much do u miss me?</p>
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">YIPPIEEE 💕</h2>
+        <p className="text-center text-gray-600 mb-6">But do u miss me?</p>
 
         <div className="mb-8">
           <div className="flex justify-between items-center mb-3">
-            <label className="text-sm font-semibold text-gray-700">Miss-O-Meter</label>
+            <label className="text-sm font-semibold text-gray-700">How much do u miss me tho?</label>
             <span className="text-xl font-bold text-pink-500">{sliderValue}%</span>
           </div>
           <input

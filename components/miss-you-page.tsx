@@ -87,13 +87,13 @@ export default function MissYouPage() {
           <h1
             className={`text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-rose-500 transition-opacity duration-1000 ${phase >= 1 ? "opacity-100" : "opacity-0"}`}
           >
-            I miss you so much &lt;3
+            IM SORRYYYY &lt;3
           </h1>
 
           <p
             className={`text-2xl md:text-3xl text-gray-700 font-semibold mt-4 transition-opacity duration-1000 ${phase >= 2 ? "opacity-100" : "opacity-0"}`}
           >
-            Do you miss me?
+            Do you forgive me?
           </p>
         </div>
 
