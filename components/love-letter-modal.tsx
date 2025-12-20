@@ -14,7 +14,7 @@ export default function LoveLetterModal({ onOkayy }: LoveLetterModalProps) {
             <div className="text-4xl sm:text-5xl md:text-6xl mb-3">💌</div>
 
             <p className="font-serif text-pink-700 text-sm sm:text-base md:text-lg leading-relaxed tracking-wide whitespace-normal break-words">
-            I'm truly sorry for what I said the other day. I never meant to hurt you. I regret letting my emotions get the best of me and the pain I caused. You mean everything to me, and I promise to keep growing and being a better partner. Please forgive me chandii.
+            IM SORRYY BABYY, idk what i did but im still sorry. please dont be mad nomo. i love you. PLEASE
             </p>
 
             <p className="mt-4 font-medium text-pink-600 text-sm sm:text-base md:text-lg leading-relaxed whitespace-normal">
